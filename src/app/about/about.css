@@ -1,0 +1,11 @@
+.login-bar {
+    display: flex;
+    gap: 20px;
+}
+
+.heading {
+    color: orange;
+    font-size: x-large;
+    font-weight: 900;
+    text-align: center;
+}
