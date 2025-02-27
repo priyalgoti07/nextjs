@@ -7,7 +7,7 @@ export default function studentlist() {
             <h1 className="font-bold text-[26px]">Student List</h1>
             <ul>
                 {dynamicName.map((name) => (
-                    <li>
+                    <li key={name}>
                         <Link href={`/studentlist/${name}`}>{name}</Link>
                     </li>
                 ))}
