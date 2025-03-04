@@ -2,6 +2,10 @@
 import Link from 'next/link';
 import './globals.css'
 import { useRouter } from 'next/navigation';
+import customes from "./custom.module.css";
+import other from './other.module.css';
+// import outside from '@/app/style/outside.module.css'
+import outside from '../app/style/outside.module.css'
 export default function Home() {
   const router = useRouter()
 
@@ -28,6 +32,9 @@ export default function Home() {
         onClick={() => navigation('/about')}>
         Go About Page through Button Tage
       </button> */}
+      <h1 className={customes.main}>Custome Module CSS</h1>
+      <h1 className={other.main}>other Module CSS</h1>
+      <h3 className={outside.main}>OutSide CSS</h3>
     </div>
   );
 }
