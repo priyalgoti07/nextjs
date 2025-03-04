@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 async function userList() {
     const result = await fetch('https://dummyjson.com/users');
     const data = await result.json();
@@ -11,7 +13,10 @@ export default async function page() {
         <div>
             <h1 className="font-bold text-[14px] text-blue-500">CatList</h1>
             {Users.map((user) => (
-                <p><strong>User Name:</strong>{user.firstName}</p>
+                <div key={user.id}>
+                    <p><strong>User Name:</strong>{user.firstName}</p>
+                    <Button  user={user}/>
+                </div>
             ))}
         </div>
     )
