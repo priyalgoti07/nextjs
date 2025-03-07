@@ -8,8 +8,9 @@ export default function page() {
 
 
 
-export function generateMetadata({ }) {
+export function generateMetadata() {
     return {
-        title: "meta page title"
+        title: "meta page title",
+        description: "meta page description"
     }
 }
