@@ -8,6 +8,6 @@ function getLocation() {
   }
   
   function showPosition(position) {
-   console.log("position",position)
+   console.log("position==============>",position)
   }
   getLocation()
