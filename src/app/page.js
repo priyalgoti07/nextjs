@@ -43,6 +43,7 @@ export const roboto_mono = Roboto_Mono({
         onClick={() => navigation('/about')}>
         Go About Page through Button Tage
       </button> */}
+      <img src="/images.jpeg"/>
       <h1 className={customes.main}>Custome Module CSS</h1>
       <h1 className={other.main}>other Module CSS</h1>
       <h3 className={outside.main}>OutSide CSS</h3>
