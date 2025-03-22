@@ -6,21 +6,26 @@ import customes from "./custom.module.css";
 import other from './other.module.css';
 // import outside from '@/app/style/outside.module.css'
 import outside from '../app/style/outside.module.css'
-import {Roboto} from "next/font/google";
+import { Roboto } from "next/font/google";
 import { inter, roboto_mono } from './font';
+import {API_BASE_URL} from '../../src/config/constants'
 const roboto = Roboto({
   weight: '300',
   subsets: ['latin'],
   display: 'swap'
 })
 export default function Home() {
+  console.log(process.env.SERVER_PASSWORD)
   const router = useRouter()
 
   const navigation = (name) => {
     router.push(name)
   }
   return (
+
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)">
+      {process.env.NODE_ENV === "development" ? <h1>I am Development</h1> : <h1>I am Production</h1>}
+      {API_BASE_URL}
       <h1>Fetch Data With API in Client Components</h1>
       <Link href={'/productlist'}>Go to Product List</Link>
       <br />
@@ -43,7 +48,7 @@ export const roboto_mono = Roboto_Mono({
         onClick={() => navigation('/about')}>
         Go About Page through Button Tage
       </button> */}
-      <img src="/images.jpeg"/>
+      <img src="/images.jpeg" />
       <h1 className={customes.main}>Custome Module CSS</h1>
       <h1 className={other.main}>other Module CSS</h1>
       <h3 className={outside.main}>OutSide CSS</h3>
